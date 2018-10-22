@@ -1,0 +1,39 @@
+\begin{titlepage}
+\newlength{\myind}
+\addtolength{\myind}{57mm}
+
+\newlength{\myrulelength}
+\addtolength{\myrulelength}{.6\marginparwidth}
+\addtolength{\myrulelength}{\textwidth}
+\newcommand{\myrule}{\parbox{\myrulelength}{\hrulefill}}
+%\newcommand{\mybox}[1]{\hspace{.5\marginparwidth}\parbox{\myrulelength}{#1}}
+%\newcommand{\mycbox}[1]{\hspace{.5\marginparwidth}\parbox{\myrulelength}{\centering #1}}
+\newcommand{\mybox}[1]{\parbox{\myrulelength}{#1}}
+\newcommand{\mycbox}[1]{\parbox{\myrulelength}{\centering #1}}
+
+\centering
+\large 		Slovenská technická univerzita v Bratislave\\
+		Fakulta informatiky a informaèných technológií\\
+		Študijný program: Informatika
+
+\vspace{4mm}
+\myrule
+
+\vspace{55mm}
+
+\mycbox{Meno Priezvisko}
+
+\vspace{10mm}
+
+\mycbox{\LARGE \textbf{Téma}}
+
+\vspace{4mm}
+\mycbox{\large Diplomový/Bakalársky projekt 2/Diplomová práca}
+
+
+\vfill
+\begin{flushleft}
+Vedúci diplomového/bakalárskeho projektu: doc. Ing. Valentino Vraniæ, PhD.\\
+December 2010
+\end{flushleft}
+\end{titlepage}

@@ -1,0 +1,62 @@
+
+\chapter{Jedna kapitola} \label{jedna}
+
+V tejto kapitole\ldots
+
+»asù~\ref{jedna:nejaka} pribliûuje\ldots\
+»asù~\ref{jedna:ina} vysvetæuje\ldots\
+»asù~\ref{jedna:este} prin·öa nov˝ prÌstup k\ldots
+
+
+\section{Nejak· Ëasù} \label{jedna:nejaka}
+
+\ldots
+
+\subsection{PodËasù} \label{jedna:nejaka-pod}
+
+\ldots
+
+
+\subsection{œalöia podËasù} \label{jedna:nejaka-dalsia}
+
+Na obr·zku~\ref{f:gen-spec} vidÌme\ldots
+
+\begin{figure}[tbh] \centering
+\includegraphics[scale=\magnf]{fig/gen-spec}
+\caption{Generally applicable and domain specific changes.}
+\label{f:gen-spec}
+\end{figure}
+
+
+
+\section{In· Ëasù} \label{jedna:ina}
+
+V Ëasti~\ref{jedna:nejaka-pod} bol vysvetlen˝ princÌp~\cite{Vranic:AJParadigms,Alexander:Timeless}\ldots\ Toto je kÛd:
+\ajset
+\begin{lstlisting}
+public class SMTPServerM extends SMTPServer {
+   . . .
+}
+. . .
+public aspect SMTPServerBackupA {
+   public pointcut SMTPServerConstructor(URL url, String user, String password):
+      call(SMTPServer.new(..)) && args (url, user, password);
+   SMTPServer around(URL url, String user, String password):
+      SMTPServerConstructor(url, user, password) {
+      return getSMTPServerBackup(proceed(url, user, password));
+   }
+   private SMTPServer getSMTPServerBackup(SMTPServer obj) {
+      if (obj.isConnected()) {
+         return obj;
+      }
+      else {
+         return new SMTPServerM(obj.getUrl(), obj.getUser(),
+            obj.getPassword());
+      }
+   }
+}
+\end{lstlisting}
+
+     
+
+\section{Eöte in· Ëasù} \label{jedna:este}

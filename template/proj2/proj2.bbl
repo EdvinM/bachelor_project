@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+
+\bibitem{Alexander:Timeless}
+C.~Alexander.
+\newblock {\em The Timeless Way of Building}.
+\newblock Oxford University Press, 1979.
+\newblock Cited in~\cite{Coplien:MPD}.
+
+\bibitem{Coplien:MPD}
+J.~O. Coplien.
+\newblock {\em Multi-Paradigm Design for C++}.
+\newblock Addison-Wesley, 1999.
+
+\bibitem{Vranic:AJParadigms}
+V.~Vraniæ.
+\newblock {AspectJ} paradigm model: A basis for multi-paradigm design for
+  {AspectJ}.
+\newblock Technical report, Slovak University of Technology in Bratislava,
+  Slovakia, May 2001.
+
+\end{thebibliography}

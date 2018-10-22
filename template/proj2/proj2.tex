@@ -1,0 +1,79 @@
+% Vzor BP2/DP2/DP
+% 30-Apr-14
+
+\documentclass[11pt,slovak,a4paper]{book}
+%\usepackage[T1]{fontenc}
+\usepackage[IL2]{fontenc}
+\usepackage[cp1250]{inputenc}
+\usepackage{babel}
+\usepackage{url}
+\usepackage[nottoc]{tocbibind}
+\usepackage{fancyhdr}
+\usepackage{ifthen}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{listings}
+\lstset{language=[AspectJ]Java,basicstyle=\fontsize{9}{10.8}\selectfont,showstringspaces=false,columns=fullflexible}
+
+\newcommand{\magnf}{.65}
+\newcommand{\codesize}{\footnotesize}
+\newcommand{\lsti}{\ajset\lstinline[basicstyle=\fontsize{10}{12}\selectfont]}
+\newcommand{\emp}[1]{\emph{#1}}
+\newcommand{\ffe}[1]{\textsf{#1}}
+
+\newcommand{\blankpg}{\clearpage{\pagestyle{empty}\cleardoublepage}}
+
+% balík listings niekedy niektoré k¾úèové slová nezvırazòuje ak to nedostane príkazom tesne pred textom
+\newcommand{\ajset}{\lstset{emph={class,aspect,new,call,execution,set,int,advice,public,thisJoinPointStaticPart,thisEnclosingJoinPointStaticPart,@annotation,dominates},emphstyle=\bfseries}}
+
+\pagestyle{myheadings}
+
+\begin{document}
+
+\input title.lx
+\blankpg
+
+\begin{titlepage}
+\section*{Anotácia}
+\ldots
+\end{titlepage}
+\blankpg
+
+
+\pagestyle{fancy}
+\headheight 14pt
+
+
+\pagenumbering{roman}
+\tableofcontents
+\blankpg
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+
+
+\input uvod.lx
+\blankpg
+\input jedna.lx
+\blankpg
+\input druha.lx
+\blankpg
+\input uplne.lx
+\blankpg
+\input suvisiace.lx
+\blankpg
+\input zhodnotenie.lx
+\blankpg
+
+
+\bibliographystyle{abbrv} % môe by aj plain alebo alpha
+\bibliography{mybib}
+
+\appendix
+
+\input p-nejaka.lx
+\input p-este.lx
+
+
+\end{document}
